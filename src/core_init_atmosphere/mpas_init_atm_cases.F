@@ -65,6 +65,7 @@ module init_atm_cases
       integer, pointer :: config_init_case
       logical, pointer :: config_static_interp
       logical, pointer :: config_native_gwd_static
+      logical, pointer :: config_native_gwd_gsl_static
       logical, pointer :: config_met_interp
       logical, pointer :: config_blend_bdy_terrain
       character (len=StrKIND), pointer :: config_start_time
@@ -174,6 +175,7 @@ module init_atm_cases
 
             call mpas_pool_get_config(block_ptr % configs, 'config_static_interp', config_static_interp)
             call mpas_pool_get_config(block_ptr % configs, 'config_native_gwd_static', config_native_gwd_static)
+            call mpas_pool_get_config(block_ptr % configs, 'config_native_gwd_gsl_static', config_native_gwd_gsl_static)
             call mpas_pool_get_config(block_ptr % configs, 'config_met_interp', config_met_interp)
             call mpas_pool_get_config(block_ptr % configs, 'config_blend_bdy_terrain', config_blend_bdy_terrain)
 
