@@ -880,7 +880,7 @@
                      description="effective orographic length for southerly flow"
                      packages="gwd_stage_out;vertical_stage_out;met_stage_out"/>
 
-                <var name="ol3" type="real" dimensions="nCells" units="unitles"
+                <var name="ol3" type="real" dimensions="nCells" units="unitless"
                      description="effective orographic length for south-westerly flow"
                      packages="gwd_stage_out;vertical_stage_out;met_stage_out"/>
 
@@ -888,7 +888,7 @@
                      description="effective orographic length for north-westerly flow"
                      packages="gwd_stage_out;vertical_stage_out;met_stage_out"/>
 
-                <!-- GWDO fields - meso-scale -->
+                <!-- GSL GWDO fields - meso-scale -->
                 <var name="var2dls" type="real" dimensions="nCells" units="m"
                      description="standard deviation of subgrid-scale orography"
                      packages="gwd_gsl_stage_out;vertical_stage_out;met_stage_out"/>
@@ -921,7 +921,7 @@
                      description="effective orographic length for southerly flow"
                      packages="gwd_gsl_stage_out;vertical_stage_out;met_stage_out"/>
 
-                <var name="ol3ls" type="real" dimensions="nCells" units="unitles"
+                <var name="ol3ls" type="real" dimensions="nCells" units="unitless"
                      description="effective orographic length for south-westerly flow"
                      packages="gwd_gsl_stage_out;vertical_stage_out;met_stage_out"/>
 
@@ -929,7 +929,7 @@
                      description="effective orographic length for north-westerly flow"
                      packages="gwd_gsl_stage_out;vertical_stage_out;met_stage_out"/>
 
-                <!-- GWDO fields - small-scale -->
+                <!-- GSL GWDO fields - small-scale -->
                 <var name="var2dss" type="real" dimensions="nCells" units="m"
                      description="standard deviation of subgrid-scale orography"
                      packages="gwd_gsl_stage_out;vertical_stage_out;met_stage_out"/>
@@ -962,7 +962,7 @@
                      description="effective orographic length for southerly flow"
                      packages="gwd_gsl_stage_out;vertical_stage_out;met_stage_out"/>
 
-                <var name="ol3ss" type="real" dimensions="nCells" units="unitles"
+                <var name="ol3ss" type="real" dimensions="nCells" units="unitless"
                      description="effective orographic length for south-westerly flow"
                      packages="gwd_gsl_stage_out;vertical_stage_out;met_stage_out"/>
 
