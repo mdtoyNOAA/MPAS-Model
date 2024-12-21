@@ -1,0 +1,3 @@
+[submodule "src/core_atmosphere/physics/UGWP"]
+	path = src/core_atmosphere/physics/UGWP
+	url = https://github.com/mdtoyNOAA/UGWP.git
