@@ -139,11 +139,12 @@ use mpas_stream_manager
  real(kind=RKIND),dimension(:),pointer:: t_oml,t_oml_initial,t_oml_200m_initial
  real(kind=RKIND),dimension(:),pointer:: h_oml,h_oml_initial,hu_oml,hv_oml
  real(kind=RKIND),dimension(:),pointer:: rdzw,dzu
- real(kind=RKIND), pointer:: config_dt
+ real(kind=RKIND),pointer:: config_dt
  integer,pointer:: nCells,nVertLevels
  character(len=StrKIND),pointer:: gwdo_scheme
  logical,pointer:: ngw_scheme
  integer,pointer:: ntau_d1y
+ real(kind=RKIND),pointer:: knob_ugwp_tauamp
  real(kind=RKIND),dimension(:),pointer:: ugwp_taulat
  integer,dimension(:),pointer:: jindx1_tau, jindx2_tau
  real(kind=RKIND),dimension(:),pointer:: ddy_j1tau, ddy_j2tau

@@ -60,7 +60,7 @@ core_physics_mmm: core_physics_init
 	(cd physics_mmm; $(MAKE) -f Makefile.mpas all)
 
 core_UGWP: core_physics_init
-        (cd UGWP; $(MAKE) all)
+	(cd UGWP; $(MAKE) all)
 
 core_physics_wrf: core_physics_init core_physics_mmm core_UGWP
 	(cd physics_wrf; $(MAKE) all COREDEF="$(COREDEF)")
