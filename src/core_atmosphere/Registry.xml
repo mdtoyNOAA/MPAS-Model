@@ -1369,6 +1369,7 @@
 #endif
                 </stream>
 
+#ifdef DO_PHYSICS
                 <stream name="diag_ugwp"
                         type="output"
                         filename_template="diag_ugwp.$Y-$M-$D_$h.$m.$s.nc"
@@ -1400,6 +1401,7 @@
                         <var name="dvdt_ngw"/>
                         <var name="dtdt_ngw"/>
                 </stream>
+#endif
 
 	</streams>
 
