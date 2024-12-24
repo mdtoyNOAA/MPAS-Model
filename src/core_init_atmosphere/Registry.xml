@@ -268,6 +268,11 @@
                      description="Whether to recompute subgrid-scale orography statistics directly on the native MPAS mesh (case 7 only)"
                      possible_values="true or false"/>
 
+                <nml_option name="config_native_gwd_gsl_static"     type="logical"       default_value="false"
+                     units="-"
+                     description="Whether to recompute subgrid-scale orography statistics for the GSL drag directly on the native MPAS mesh (case 7 only)"
+                     possible_values="true or false"/>
+
                 <nml_option name="config_gwd_cell_scaling"      type="real"          default_value="1.0"      in_defaults="false"
                      units="-"
                      description="Scaling factor for the effective grid cell diameter used in computation of GWD static fields"
