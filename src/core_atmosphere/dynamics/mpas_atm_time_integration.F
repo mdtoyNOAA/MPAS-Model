@@ -9137,11 +9137,11 @@ module atm_time_integration
          call mpas_pool_get_array(mesh, 'latCell', latCell)
          call mpas_pool_get_array(mesh, 'lonCell', lonCell)
 
-         scalar_min = 1.0e20
+         scalar_min = 1.0e20_RKIND
          offset_1d = huge(1)
          indexMax = -1
-         latMax = 0.0
-         lonMax = 0.0
+         latMax = 0.0_RKIND
+         lonMax = 0.0_RKIND
          !$acc parallel default(present)
          !$acc loop gang vector reduction(min:scalar_min)
          do iCell = 1, nCellsSolve
@@ -9176,19 +9176,19 @@ module atm_time_integration
          lonMax_global = globalVals(5)
          latMax_global = latMax_global * 180.0_RKIND / pi_const
          lonMax_global = lonMax_global * 180.0_RKIND / pi_const
-         if (lonMax_global > 180.0) then
-            lonMax_global = lonMax_global - 360.0
+         if (lonMax_global > 180.0_RKIND) then
+            lonMax_global = lonMax_global - 360.0_RKIND
          end if
          ! format statement should be '(a,f9.4,a,f7.3,a,f8.3,a)'
          call mpas_log_write(' global min tend_sfc_pressure: $r  $r lat, $r lon',              &
                              realArgs=(/global_scalar_min, latMax_global, lonMax_global/))
 
-         scalar_max = -1.0e20
+         scalar_max = -1.0e20_RKIND
          offset_1d = huge(1)
          indexMax = -1
          kMax = -1
-         latMax = 0.0
-         lonMax = 0.0
+         latMax = 0.0_RKIND
+         lonMax = 0.0_RKIND
          !$acc parallel default(present)
          !$acc loop gang vector reduction(max:scalar_max)
          do iCell = 1, nCellsSolve
@@ -9220,8 +9220,8 @@ module atm_time_integration
          lonMax_global = globalVals(5)
          latMax_global = latMax_global * 180.0_RKIND / pi_const
          lonMax_global = lonMax_global * 180.0_RKIND / pi_const
-         if (lonMax_global > 180.0) then
-            lonMax_global = lonMax_global - 360.0
+         if (lonMax_global > 180.0_RKIND) then
+            lonMax_global = lonMax_global - 360.0_RKIND
          end if
          ! format statement should be '(a,f9.4,a,f7.3,a,f8.3,a)'
          call mpas_log_write(' global max tend_sfc_pressure: $r  $r lat, $r lon',              &
@@ -9233,8 +9233,8 @@ module atm_time_integration
             call mpas_log_write('')
          end if
 
-         scalar_min = 0.0
-         scalar_max = 0.0
+         scalar_min = 0.0_RKIND
+         scalar_max = 0.0_RKIND
          !$acc parallel default(present)
          !$acc loop gang vector reduction(min:scalar_min) reduction(max:scalar_max)
          do iCell = 1, nCellsSolve
